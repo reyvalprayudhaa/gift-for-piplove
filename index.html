@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Gift For Her</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/Swear It Again.mp3" type="audio/mpeg">
+  </audio>
+
+  <main id="app">
+
+    <!-- =========================
+         1. OPENING
+         ========================= -->
+    <section class="scene active" id="sceneOpening">
+      <div class="top-title">Gift For Pip</div>
+
+      <div class="opening-card">
+        <div class="mini-heart">♥</div>
+        <h1 id="openingTitle"></h1>
+        <p id="openingText"></p>
+
+        <button class="main-btn" onclick="nextScene()">
+          Buka hadiah <span>♥</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================
+         2. LETTER
+         ========================= -->
+    <section class="scene" id="sceneLetter">
+      <div class="top-title">A Little Letter</div>
+
+      <div class="letter-wrap">
+        <div class="letter-paper">
+          <div class="paper-line"></div>
+          <h2 id="letterTitle"></h2>
+          <p id="letterText"></p>
+          <div class="signature" id="letterSignature"></div>
+        </div>
+
+        <button class="next-btn" onclick="nextScene()">Lanjut ♥</button>
+      </div>
+    </section>
+
+    <!-- =========================
+         3. TREE
+         ========================= -->
+    <section class="scene tree-scene" id="sceneTree">
+      <div class="top-title">For You</div>
+
+      <div class="tree-area">
+        <canvas id="heartTree" aria-label="Pohon dari hati kecil berwarna-warni"></canvas>
+      </div>
+
+      <div class="tree-text">
+        <h2 id="treeTitle"></h2>
+        <p id="treeText"></p>
+      </div>
+
+      <button class="next-btn tree-next" onclick="nextScene()">Lanjut ♥</button>
+    </section>
+
+    <!-- =========================
+         4. WAKTU BERSAMA / I LOVE YOU
+         ========================= -->
+    <section class="scene love-scene" id="sceneLove">
+      <div class="top-title">One More Thing</div>
+
+      <div class="love-content">
+        <div class="floating-heart">♥</div>
+        <h1 id="loveTitle"></h1>
+        <p id="loveText"></p>
+
+        <p id="togetherLabel" class="together-label">Our time together...</p>
+        <div class="countdown" aria-label="Waktu bersama">
+          <div><strong id="days">—</strong><span>Hari</span></div>
+          <div><strong id="hours">—</strong><span>Jam</span></div>
+          <div><strong id="minutes">—</strong><span>Menit</span></div>
+          <div><strong id="seconds">—</strong><span>Detik</span></div>
+        </div>
+
+        <button class="main-btn" onclick="nextScene()">Lihat pesan ♥</button>
+      </div>
+    </section>
+
+    <!-- =========================
+         5. PHOTO / MEMORY CARDS
+         ========================= -->
+    <section class="scene memories-scene" id="sceneMemories">
+      <div class="top-title">A Little Gallery of You</div>
+
+      <div class="memory-intro">
+        <h2 id="memoryTitle"></h2>
+        <p id="memoryText"></p>
+      </div>
+
+      <div class="cards" id="cards"></div>
+
+      <div class="final-message">
+        <p id="finalText"></p>
+        <div class="final-sign" id="finalSignature"></div>
+      </div>
+
+      <button class="restart-btn" onclick="restart()">↻ Ulangi</button>
+    </section>
+
+  </main>
+
+  <div class="music-control" onclick="toggleMusic()" title="Musik">
+    <span id="musicIcon">♫</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
